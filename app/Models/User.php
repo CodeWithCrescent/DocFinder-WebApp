@@ -77,4 +77,10 @@ class User extends Authenticatable
     public function patient_data() {
         return $this->hasOne(PatientDetails::class, 'user_id');
     }
+    public function hospital() {
+        return $this->hasOne(Hospital::class, 'user_id');
+    }
+    public function department() {
+        return $this->hasOne(Departments::class, 'user_id');
+    }
 }
