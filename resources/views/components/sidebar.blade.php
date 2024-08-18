@@ -14,30 +14,22 @@
         <ul class="sidebar-menu">
             <li><a href="{{ route('admin.dashboard') }}"><i class="ri-dashboard-line me-2 d-inline-block"></i>Dashboard</a></li>
 
-            <li><a href="{{ route('admin.appointments') }}"><i class="ri-stethoscope-line me-2 d-inline-block"></i>Appointment</a></li>
+            <li><a href="{{ route('admin.hospitals') }}"><i class="ri-stethoscope-line me-2 d-inline-block"></i>Hospitals</a></li>
 
-            <li class="sidebar-dropdown">
-                <a href="javascript:void(0)"><i class="ri-hospital-line me-2 d-inline-block"></i>Hospitals</a>
-                <div class="sidebar-submenu">
-                    <ul>
-                        <li><a href="#">Hospitals</a></li>
-                        <li><a href="#">Add Hospital</a></li>
-                    </ul>
-                </div>
-            </li>
+            <li><a href="{{ route('admin.appointments') }}"><i class="ri-stethoscope-line me-2 d-inline-block"></i>Appointment</a></li>
 
             <li class="sidebar-dropdown">
                 <a href="javascript:void(0)"><i class="ri-user-line me-2 d-inline-block"></i>Doctors</a>
                 <div class="sidebar-submenu">
                     <ul>
-                        <li><a href="{{ route('admin.doctors') }}">Doctors</a></li>
                         <li><a href="{{ route('admin.add.doctor') }}">Add Doctor</a></li>
+                        <li><a href="{{ route('admin.doctors') }}">Doctors</a></li>
                     </ul>
                 </div>
             </li>
 
             <li><a href="{{ route('admin.patients') }}"><i class="ri-wheelchair-line me-2 d-inline-block"></i>Patients</a></li>
-
+            
             <li class="sidebar-dropdown">
                 <a href="javascript:void(0)"><i class="ri-more-fill me-2 d-inline-block"></i>More</a>
                 <div class="sidebar-submenu">
