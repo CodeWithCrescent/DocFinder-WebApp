@@ -118,7 +118,7 @@ function activateMenu() {
 
 //Admin Menu
 function activateSidebarMenu() {
-    var current = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+    var current = location.pathname.substring(location.pathname.lastIndexOf('/') + 2);
     if (current !== "" && document.getElementById("sidebar")){
         var menuItems = document.querySelectorAll('#sidebar a');
         for (var i = 0, len = menuItems.length; i < len; i++) {
