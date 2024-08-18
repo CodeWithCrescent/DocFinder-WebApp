@@ -79,12 +79,7 @@
                     <div class="card login-page shadow mt-4 rounded border-0">
                         <div class="card-body">
                             {{-- <h4 class="text-center">Sign In</h4>   --}}
-                            @include('components.validation-errors')
-                            @if (session('status'))
-                                <div class="mb-4 font-medium text-sm text-green-600">
-                                    {{ session('status') }}
-                                </div>
-                            @endif
+                            @include('components.validation-message')
                             @yield('auth-form')
                         </div>
                     </div><!---->
