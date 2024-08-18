@@ -28,7 +28,9 @@ class User extends Authenticatable
         'role',
         'name',
         'email',
+        'phone',
         'password',
+        'profile_photo_path',
     ];
 
     /**
@@ -71,16 +73,21 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-
     
     // Table relationships
-    public function patient_data() {
+    public function doctorDetails() {
+        return $this->hasOne(DoctorDetails::class, 'user_id');
+    }
+
+    public function patientDetails() {
         return $this->hasOne(PatientDetails::class, 'user_id');
     }
+
     public function hospital() {
         return $this->hasOne(Hospital::class, 'user_id');
     }
+
     public function department() {
-        return $this->hasOne(Departments::class, 'user_id');
+        return $this->hasOne(Department::class, 'user_id');
     }
 }
